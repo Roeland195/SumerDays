@@ -1,17 +1,51 @@
-.anything{
-    background-color: red;
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
 }
 
-.teamlist{
-    margin: auto;
-    width: 60vw;
-    height: 20vh; 
-    overflow: auto;
-    border: solid 1px black;
-}
+.containter{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 2em;
+    max-height: 100vh;
+    min-height: 100vh;
 
-.btn{
-    height: 5em;
-    width: 10em;
-    border-radius: 1em;
+    .imagediv{
+        padding-top: 1em;
+    }
+
+    img{
+        display: block;
+        margin: 0 auto;
+        min-width: 70%;
+        max-width: 80%;
+    }
+    
+    form{
+        padding-top: 10px;
+        display: grid;
+        grid-template-rows: 7% 7% 50% 10%;
+        gap: 1em;
+        height: 100%;
+
+        .input{
+            margin: auto;
+            width: 80%;
+        }
+
+        .teamlist{
+            margin: 2em auto;
+            overflow: auto;
+            width: 80%;
+            border: solid 1px black;
+        }
+        
+        .btn{
+            height: 100%;
+            min-height: 40px;
+            width: 10em;
+            border-radius: 1em;
+        }
+    }
 }

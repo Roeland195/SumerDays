@@ -1,50 +1,33 @@
-<div class="text-center">
-        <img class="img-fluid goTeamLogo" src="assets/images/logo.png">
-    <div class="row">
-        <form >
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="form-group col-xs-12">
-                        <input 
-                        type="text"
-                        id="name"
-                        placeholder="Team naam"
-                        formControlName="name"
-                        class="fomr-control">
-                    </div>
-                </div>
+<div class="text-center containter">
+    <div class="imagediv">
+        <img src="assets/images/logo.png">
+    </div>
+        <form>
+            <div class="form-group col-xs-12 input">
+                <input 
+                    type="text"
+                    id="name"
+                    placeholder="Team naam"
+                    formControlName="name"
+                    class="form-control">
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="form-group">
-                        <input 
-                        type="text"
-                        id="imagePath"
-                        placeholder="team lid"
-                        formControlName="imagePath"
-                        class="fomr-control"
-                        #imagePath>
-                    </div>
-                </div>
+            <div class="form-group col-xs-12 input">
+                <input 
+                    type="text"
+                    id="imagePath"
+                    placeholder="team lid"
+                    formControlName="name"
+                    class="form-control"
+                    #imagePath>
             </div>
-            <div class="col-xs-12">
-                <div class="teamlist">
-                    <app-teammember-item class="teammember"
+            <div class="teamlist">
+                <app-teammember-item class="teammember"
                     *ngFor="let teammember of members; let i = index"
                     [member]="teammember"
                     [index]="i"></app-teammember-item>
-                </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12" formArrayName="ingredients">
-                      <div class="row">
-                          <div class="col-xs-12">
-                              <button type="button" class="btn btn-primary">Enter Active Pool</button>
-                          </div>
-                      </div>
-                </div>
+            <div>
+                <button type="button" class="btn btn-primary">Enter Active Pool</button>
             </div>
         </form>
-    </div>
-
 </div>
