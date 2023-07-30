@@ -11,18 +11,12 @@ import { BinaryComponent } from './game/binary/binary.component';
 export const routes: Routes =[
   {path: '', redirectTo: '/landing', pathMatch: 'full'},
   {path: 'landing', component: LandingComponent},
-  {path: 'home' , component: HomeComponent,
-    children:[
-      {path: '', component: HomeComponent},
-      {path: 'game', component: GameComponent,
-        children:[
-          {path: '', component: GameComponent},
-          {path: 'quizz', component: QuizzComponent},
-          {path: 'binary', component: BinaryComponent},
-          {path: 'clicker', component: ClickerComponent},
-          {path: 'sudoku', component: SudokuComponent},
-        ]}
-    ]}
+  {path: 'home' , component: HomeComponent},
+  {path: 'game', component: GameComponent},
+  {path: 'quizz', component: QuizzComponent},
+  {path: 'binary', component: BinaryComponent},
+  {path: 'clicker', component: ClickerComponent},
+  {path: 'sudoku', component: SudokuComponent}
 ];
 
 @NgModule({

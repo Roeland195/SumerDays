@@ -15,9 +15,9 @@
     <div class="score-container">
         <div class="container-row gamescore">
             <app-game-item class="item"
-            *ngFor="let game of games; let i = index"
+            *ngFor="let game of games let i = index"
             [game]="game"
-            [index]="i"></app-game-item>
+            [index]="i +1"></app-game-item>
         </div>
     </div>
 </div>
