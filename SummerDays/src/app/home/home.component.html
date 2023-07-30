@@ -1,1 +1,25 @@
-<p>home works</p>
+<div class="page">
+<div class="text-center container">
+    <div class="top-container">
+        <h1>Team naam</h1>
+        <div class="form-group col-xs-12 input">
+            <input 
+                type="text"
+                id="imagePath"
+                placeholder="Opdracht Code"
+                formControlName="name"
+                class="form-control"
+                #imagePath>
+        </div>
+    </div>
+    <div class="score-container">
+        <div class="container-row gamescore">
+            <app-game-item class="item"
+            *ngFor="let game of games; let i = index"
+            [game]="game"
+            [index]="i"></app-game-item>
+        </div>
+    </div>
+</div>
+
+</div>

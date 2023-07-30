@@ -12,6 +12,7 @@ import { SudokuComponent } from './game/sudoku/sudoku.component';
 import { BinaryComponent } from './game/binary/binary.component';
 import { QuizzComponent } from './game/quizz/quizz.component';
 import { TeammemberItemComponent } from './landing/teammember-item/teammember-item.component';
+import { GameItemComponent } from './home/game-item/game-item.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TeammemberItemComponent } from './landing/teammember-item/teammember-it
     SudokuComponent,
     BinaryComponent,
     QuizzComponent,
-    TeammemberItemComponent
+    TeammemberItemComponent,
+    GameItemComponent
   ],
   imports: [
     BrowserModule,

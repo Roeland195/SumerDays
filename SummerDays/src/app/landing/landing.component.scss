@@ -1,10 +1,9 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    background-color: antiquewhite;
+.page{
+    height: 100vh;
+    overflow: scroll;
 }
 
-.containter{
+.container{
     display: grid;
     grid-template-rows: auto auto;
     gap: 2em;
@@ -13,7 +12,6 @@ html, body{
 
     .imagediv{
         padding-top: 1em;
-    }
 
     img{
         display: block;
@@ -21,6 +19,7 @@ html, body{
         min-width: 70%;
         max-width: 80%;
     }
+}
     
     form{
         padding-top: 10px;
