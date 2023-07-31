@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
+  games: any;
+
 ngOnInit(): void {
 }
 
@@ -51,6 +53,4 @@ constructor(){
                 {"name": "Reken daar maar niet op", "color": "",},
                 {"name": "Alle eentjes zwemmen in het water", "color": "red",}];
 }
-
-games: any;
 }
