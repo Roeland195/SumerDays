@@ -13,6 +13,8 @@ import { BinaryComponent } from './game/binary/binary.component';
 import { QuizzComponent } from './game/quizz/quizz.component';
 import { TeammemberItemComponent } from './landing/teammember-item/teammember-item.component';
 import { GameItemComponent } from './home/game-item/game-item.component';
+import { BinaryGridItemComponent } from './game/binary/binary-grid-item/binary-grid-item.component';
+import { SudokuGridItemComponent } from './game/sudoku/sudoku-grid-item/sudoku-grid-item.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { GameItemComponent } from './home/game-item/game-item.component';
     BinaryComponent,
     QuizzComponent,
     TeammemberItemComponent,
-    GameItemComponent
+    GameItemComponent,
+    BinaryGridItemComponent,
+    SudokuGridItemComponent
   ],
   imports: [
     BrowserModule,

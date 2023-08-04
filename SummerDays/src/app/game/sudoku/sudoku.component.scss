@@ -1,0 +1,38 @@
+@media only screen and (min-width: 246px) {
+    .page{
+        display: grid;
+        grid-template-rows: auto auto;
+        overflow: scroll;
+        height: 100vh;
+        padding: 2em;
+
+        .gameDescription{
+            margin: auto;
+        }
+        .binary{
+            overflow: hidden;
+            margin: auto;
+            width: 270px;
+        }
+        .clearfix{
+            height: 3px;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 345px) {
+    .page{
+        padding: 1%;
+
+        .gameDescription{
+            margin: auto;
+        }
+        .binary{
+            overflow: hidden;
+            margin: auto;
+            width: 90%;
+        }
+    }
+}
