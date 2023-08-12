@@ -1,37 +1,26 @@
 <div class="page">
+    <app-header class="header"/>
     <div class="container">
         <div class="game-discription">
-            <h2>Knots knetter gek</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                 irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                   deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                      deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                       exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                       irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                         deserunt mollit anim id est laborum.</p>
+            <h2>{{ currentlyPlaying.name }}</h2>
+            <p>{{ currentlyPlaying.description }}</p>
                          <hr class="rounded">
         </div>
 
         <form>
             <div class="form-group col-xs-12 input">
-                <input 
-                    type="text"
-                    id="name"
-                    placeholder="Antwoord"
-                    formControlName="name"
-                    class="form-control">
+                <input
+                #teamName
+                (keyup)="addAwnser($event)"
+                type="text"
+                id="name"
+                *ngIf="currentlyPlaying.type == 'question'"
+                placeholder="Antwoord"
+                formControlName="name"
+                class="form-control">
             </div>
             <div>
-                <button type="button" class="btn btn-primary"> Klaar</button>
+                <button type="button" (click)="onSubmit()" class="btn btn-primary"> Klaar</button>
             </div>
         </form>
     </div>

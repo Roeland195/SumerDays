@@ -1,0 +1,21 @@
+<div class="container">
+    <p></p>
+        <h1>{{ index }}.</h1>
+    <section class="team_container">
+        <div class="name_container">
+            <h2> {{ team.name }}</h2>
+        </div>
+        <section class="player_container">
+            <h3>Code: {{team.code}} </h3>
+            <div class="player_item">
+            <app-teammember-item class="teammember"
+            *ngFor="let teammember of team.members; let i = index"
+            [member]="teammember"
+            [index]="i"/>
+        </div>
+        </section>
+        <section class="points">
+            <h2>{{ team.points}}/p</h2>
+        </section>
+    </section>
+</div>

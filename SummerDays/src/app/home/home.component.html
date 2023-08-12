@@ -1,10 +1,13 @@
-<div class="page">
 <div class="text-center container">
+    <app-header class="header"/>
     <div class="top-container">
-        <h1>Team naam: Connect</h1>
-        <h2>Team Code: 3CF5H</h2>
+        <h1>Team naam: {{ team.name }}</h1>
+        <h2>Team Color: {{ team.color }}</h2>
         <div class="form-group col-xs-12 input">
-            <input 
+            <input
+                (keydown.enter)="goToGame($event)"
+                (keydown.enter)="filterName.value = ''"
+                #filterName
                 type="text"
                 id="imagePath"
                 placeholder="Opdracht Code"
@@ -13,6 +16,7 @@
                 #imagePath>
         </div>
     </div>
+    
     <div class="score-container">
         <div class="container-row gamescore">
             <app-game-item class="item"
@@ -21,6 +25,4 @@
             [index]="i +1"></app-game-item>
         </div>
     </div>
-</div>
-
 </div>

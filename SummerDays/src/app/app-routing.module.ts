@@ -7,6 +7,7 @@ import { QuizzComponent } from './game/quizz/quizz.component';
 import { SudokuComponent } from './game/sudoku/sudoku.component';
 import { ClickerComponent } from './game/clicker/clicker.component';
 import { BinaryComponent } from './game/binary/binary.component';
+import { AdminComponent } from './admin/admin.component';
 
 export const routes: Routes =[
   {path: '', redirectTo: '/landing', pathMatch: 'full'},
@@ -16,7 +17,8 @@ export const routes: Routes =[
   {path: 'quizz', component: QuizzComponent},
   {path: 'binary', component: BinaryComponent},
   {path: 'clicker', component: ClickerComponent},
-  {path: 'sudoku', component: SudokuComponent}
+  {path: 'sudoku', component: SudokuComponent},
+  {path: 'admin', component: AdminComponent}
 ];
 
 @NgModule({

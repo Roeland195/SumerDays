@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { gameLogicService } from 'src/app/gameEngine/logic/gamelogic.service';
 
 @Component({
   selector: 'app-binary',

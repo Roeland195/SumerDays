@@ -1,11 +1,12 @@
 <div class="page">
 <div class="text-center container">
     <div class="imagediv">
-        <img src="assets/images/logo.png">
+        <img src="assets/images/get_connected.png">
     </div>
         <form>
             <div class="form-group col-xs-12 input">
-                <input 
+                <input
+                    #teamName
                     type="text"
                     id="name"
                     placeholder="Team naam"
@@ -13,13 +14,13 @@
                     class="form-control">
             </div>
             <div class="form-group col-xs-12 input">
-                <input 
+                <input style="margin-top: 1em;"
+                    (keydown.enter)="addMember($event)"
+                    (keydown.enter)="filterName.value = ''"
+                    #filterName
                     type="text"
-                    id="imagePath"
                     placeholder="team lid"
-                    formControlName="name"
-                    class="form-control"
-                    #imagePath>
+                    class="form-control">
             </div>
             <div class="teamlist">
                 <app-teammember-item class="teammember"
@@ -28,7 +29,7 @@
                     [index]="i"></app-teammember-item>
             </div>
             <div>
-                <button type="button" class="btn btn-primary">Enter Active Pool</button>
+                <button type="button" (click)="onSubmit(teamName.value)" class="btn btn-primary">Enter Active Pool</button>
             </div>
         </form>
 </div>

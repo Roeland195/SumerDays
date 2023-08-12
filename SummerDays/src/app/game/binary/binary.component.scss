@@ -1,9 +1,8 @@
 @media only screen and (min-width: 246px) {
-    .page{
+    .container{
         display: grid;
         grid-template-rows: auto auto;
         overflow: scroll;
-        height: 100vh;
         padding: 2em;
 
         .gameDescription{
@@ -18,7 +17,7 @@
 }
 
 @media only screen and (max-width: 345px) {
-    .page{
+    .container{
         padding: 1%;
 
         .gameDescription{

@@ -1,20 +1,21 @@
 <div class="page">
-    <div class="gameDescription">
-        <p style="font-size: xx-large;">Sudoku Puzzle</p>
+    <app-header/>
+    <div class="container">
+        <div class="gameDescription">
+            <p style="font-size: xx-large;">Sudoku Puzzle</p>
+            <p>Bij het oplossen van een sudoku puzzel gelden de volgende regels.
+            <br>
+            1. Elke Cel moet een cijver bevatten tussen de 1 en 9. <br>
+            2. Op elke horizontale rij mag elk cijfer maar 1 keer voorkomen.<br>
+            3. Op elke verticale kolom mag elk cijfer maar 1 keer voorkomen.<br>
+            4. In elk subrooster mag elk cijver slechts maar 1 keer voorkomen.
+        </div>
+        <div class="binary">
+            <ng-container *ngFor="let block of awnser let i = index">
+                <div class="clearfix" *ngIf="(i % 3 == 0 && i > 0)"></div>
+                <app-sudoku-grid-item [block]="block"/> 
+            </ng-container>
 
-        <p>Bij het oplossen van een binaire puzzel gelden de volgende regels.
-        <br><br>
-        1. Elke Cel moet een 0 of 1 bevatten. <br>
-        2. Er mogen niet meer dan twee dezelfde cijfers direct naast elkaar of direct onder elkaar worden geplaatst<br>
-        3. Elke rij en elke kolom moet evenveel nullen als enen bevatten.<br>
-        4. Elke rij is uniek en elke kolum is uniek, Een willekeurige rij mag echter wel hetzelfde ingevuld worden als een willekeurige kolom.</p>
-    </div>
-    <div class="binary">
-        <ng-container *ngFor="let block of awnser let i = index">
-            <div class="clearfix" *ngIf="(i % 3 == 0 && i > 0)"></div>
-            <app-sudoku-grid-item [block]="block"/> 
-        </ng-container>
-
-
+        </div>
     </div>
 </div>

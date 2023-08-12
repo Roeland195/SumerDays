@@ -1,11 +1,15 @@
 .container{
-    display: inline;
+    padding: 0;
+    width: 100vw;
+    display: grid;
+    height: 95vh;
+    grid-template-rows: 10%, 90%;
     .top-container{
-        height: 20vh;
+        height: 100%;
     }
     .score-container{
+        height: 100%;
         padding:0 2em;
-        height: 70vh;
         overflow: scroll;
         .gamescore{
             margin: auto;
