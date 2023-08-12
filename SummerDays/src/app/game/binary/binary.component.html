@@ -1,1 +1,20 @@
-<p>binary works!</p>
+<div class="page">
+    <app-header class="header"/>
+    <div class="container">
+        <div class="gameDescription">
+            <p style="font-size: xx-large;">Binaire Puzzle</p>
+
+            <p>Bij het oplossen van een binaire puzzel gelden de volgende regels.
+            <br><br>
+            1. Elke Cel moet een 0 of 1 bevatten. <br>
+            2. Er mogen niet meer dan twee dezelfde cijfers direct naast elkaar of direct onder elkaar worden geplaatst<br>
+            3. Elke rij en elke kolom moet evenveel nullen als enen bevatten.<br>
+            4. Elke rij is uniek en elke kolum is uniek, Een willekeurige rij mag echter wel hetzelfde ingevuld worden als een willekeurige kolom.</p>
+        </div>
+        <div class="binary">
+            <app-binary-grid-item *ngFor="let block of awnser let i = index"
+            [block]="block"/>
+
+        </div>
+    </div>
+</div>

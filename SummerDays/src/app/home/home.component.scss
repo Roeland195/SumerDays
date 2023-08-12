@@ -1,0 +1,76 @@
+.container{
+    padding: 0;
+    width: 100vw;
+    display: grid;
+    height: 95vh;
+    grid-template-rows: 10%, 90%;
+    .top-container{
+        height: 100%;
+    }
+    .score-container{
+        height: 100%;
+        padding:0 2em;
+        overflow: scroll;
+        .gamescore{
+            margin: auto;
+            columns: 4;
+            column-gap: 1rem;
+            font-size: 1.2rem;
+            .item{
+                color: white;
+                margin: 0 0 1rem;
+                display: inline-block; 
+                width: 100%;
+                break-inside: avoid;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        .top-container{
+        }
+        .score-container{
+            .gamescore{
+                columns: 3;
+                .item{
+                }
+            }
+        }
+    
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container{
+        .top-container{
+        }
+        .score-container{
+            .gamescore{
+                columns: 2;
+                .item{
+                }
+            }
+        }
+    
+    }
+}
+
+@media only screen and (max-width: 260px) {
+    .container{
+        .top-container{
+        }
+        .score-container{
+            .gamescore{
+                columns: 1;
+                .item{
+                }
+            }
+        }
+    
+    }
+}

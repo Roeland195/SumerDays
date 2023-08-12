@@ -1,0 +1,23 @@
+.container{
+    display: grid;
+    padding: 0;
+    height: 85vh;
+    .top-container{
+        padding: 0 2em;
+    }
+    .awnser-container{
+        padding: 0 1em;
+        height: 100%;
+            overflow: scroll;
+    }
+}
+
+input{
+    margin-bottom: 1em;
+}
+
+.btn{
+    height: 2.1em;
+    width: 100%;
+    margin-bottom: 1em;
+}

@@ -1,0 +1,9 @@
+<a
+style="cursor: pointer;"
+[routerLink]="[index]"
+routerLinkActive="active"
+[ngStyle]="{'background-color': game.teamcolor }"
+class="list-group-item">
+    <p>{{index}}. </p>
+    <h4 class="list-group-item-heading">{{ game.name }}</h4>
+</a>

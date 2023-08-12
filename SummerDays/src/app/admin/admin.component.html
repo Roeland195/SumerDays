@@ -1,0 +1,47 @@
+<div class="page">
+    <div class="header">
+        <div class="img_container">
+            <img src="assets/images/get_connected.png">
+        </div>
+        <div class="pool">
+            <button (click)="startGame()" class="btn btn-success btn-lg">start pool</button>
+        </div>
+    </div>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <section class="group_container">
+            <h2>teams</h2>
+            <section class="group_list">
+                <app-team-item *ngFor="let team of teams;let i = index"
+                [team]="team"
+                [index]="i +1"></app-team-item>
+            </section>
+        </section>
+        <section class="team_container">
+            <h2>Team: connect</h2>
+            <div class="team_list">
+                <section class="team_header">
+                        <h4>Team Code:</h4>
+                        <H4>GHI JKL</H4>
+                </section>
+                <section class="play_games_container">
+                    <app-team-game-item *ngFor="let game of gameInfo.games; let i = index"
+                    [game]="game"
+                    [index]="i"></app-team-game-item>
+                </section>
+            </div>
+        </section>
+
+
+        <section class="game_container">
+            <h2>Games</h2>
+            <div class="games_list">
+                <app-game-admin-item *ngFor="let game of games; let i = index"
+                [game]= "game"
+                [index]="i + 1"></app-game-admin-item>
+            </div>
+        </section>
+
+    </div>
+</div>

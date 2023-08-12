@@ -1,0 +1,8 @@
+<div class="page">
+
+    <ng-container class="grid_container" *ngFor="let number of block let i = index">
+        <div class="clearfix" *ngIf="(i % 3 == 0 && i > 0)"></div>
+    <button class="grid_item">{{number}}</button>
+    </ng-container>
+
+</div>

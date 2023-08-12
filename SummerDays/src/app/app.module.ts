@@ -12,6 +12,15 @@ import { SudokuComponent } from './game/sudoku/sudoku.component';
 import { BinaryComponent } from './game/binary/binary.component';
 import { QuizzComponent } from './game/quizz/quizz.component';
 import { TeammemberItemComponent } from './landing/teammember-item/teammember-item.component';
+import { GameItemComponent } from './home/game-item/game-item.component';
+import { BinaryGridItemComponent } from './game/binary/binary-grid-item/binary-grid-item.component';
+import { SudokuGridItemComponent } from './game/sudoku/sudoku-grid-item/sudoku-grid-item.component';
+import { AntwoordBoxComponent } from './game/quizz/antwoord-box/antwoord-box.component';
+import { AdminComponent } from './admin/admin.component';
+import { TeamItemComponent } from './admin/team-item/team-item.component';
+import { GameAdminItemComponent } from './admin/game-admin-item/game-admin-item.component';
+import { TeamGameItemComponent } from './admin/team-game-item/team-game-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,11 +33,20 @@ import { TeammemberItemComponent } from './landing/teammember-item/teammember-it
     SudokuComponent,
     BinaryComponent,
     QuizzComponent,
-    TeammemberItemComponent
+    TeammemberItemComponent,
+    GameItemComponent,
+    BinaryGridItemComponent,
+    SudokuGridItemComponent,
+    AntwoordBoxComponent,
+    AdminComponent,
+    TeamItemComponent,
+    GameAdminItemComponent,
+    TeamGameItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

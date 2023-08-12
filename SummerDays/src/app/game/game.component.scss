@@ -1,0 +1,31 @@
+.container{
+    display: inline;
+    .game-discription{
+        padding: 0 2em;
+        height: 60vh;
+        p{
+            overflow: scroll;
+            height: 70%;
+        }
+        .rounded {
+            border-top: 2px solid black;
+            border-radius: 5px;
+          }
+    }
+
+    form{
+        padding: 0 2em;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        gap: 1em;
+        text-align: center;
+        height: 100%;
+
+        button{
+            height: 100%;
+            min-height: 40px;
+            width: 10em;
+            border-radius: 1em;
+        }
+    }
+}

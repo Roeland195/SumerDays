@@ -1,1 +1,27 @@
-<p>game works!</p>
+<div class="page">
+    <app-header class="header"/>
+    <div class="container">
+        <div class="game-discription">
+            <h2>{{ currentlyPlaying.name }}</h2>
+            <p>{{ currentlyPlaying.description }}</p>
+                         <hr class="rounded">
+        </div>
+
+        <form>
+            <div class="form-group col-xs-12 input">
+                <input
+                #teamName
+                (keyup)="addAwnser($event)"
+                type="text"
+                id="name"
+                *ngIf="currentlyPlaying.type == 'question'"
+                placeholder="Antwoord"
+                formControlName="name"
+                class="form-control">
+            </div>
+            <div>
+                <button type="button" (click)="onSubmit()" class="btn btn-primary"> Klaar</button>
+            </div>
+        </form>
+    </div>
+</div>

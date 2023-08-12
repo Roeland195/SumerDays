@@ -7,22 +7,18 @@ import { QuizzComponent } from './game/quizz/quizz.component';
 import { SudokuComponent } from './game/sudoku/sudoku.component';
 import { ClickerComponent } from './game/clicker/clicker.component';
 import { BinaryComponent } from './game/binary/binary.component';
+import { AdminComponent } from './admin/admin.component';
 
 export const routes: Routes =[
   {path: '', redirectTo: '/landing', pathMatch: 'full'},
   {path: 'landing', component: LandingComponent},
-  {path: 'home' , component: HomeComponent,
-    children:[
-      {path: '', component: HomeComponent},
-      {path: 'game', component: GameComponent,
-        children:[
-          {path: '', component: GameComponent},
-          {path: 'quizz', component: QuizzComponent},
-          {path: 'binary', component: BinaryComponent},
-          {path: 'clicker', component: ClickerComponent},
-          {path: 'sudoku', component: SudokuComponent},
-        ]}
-    ]}
+  {path: 'home' , component: HomeComponent},
+  {path: 'game', component: GameComponent},
+  {path: 'quizz', component: QuizzComponent},
+  {path: 'binary', component: BinaryComponent},
+  {path: 'clicker', component: ClickerComponent},
+  {path: 'sudoku', component: SudokuComponent},
+  {path: 'admin', component: AdminComponent}
 ];
 
 @NgModule({

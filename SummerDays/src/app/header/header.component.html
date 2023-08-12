@@ -1,1 +1,8 @@
-<p>header works!</p>
+<div class="header" [ngStyle]="{'background-color': getColor()}">
+    <div class="img_container">
+        <img src="assets/images/get_connected.png">
+    </div>
+    <div class="center">
+        <h3> team Code: {{ team.code }}</h3>
+    </div>
+</div>
