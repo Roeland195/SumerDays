@@ -1,28 +1,32 @@
 export class quizz{
     public question: question[];
-    public image: string;
+    
 
-    constructor(question: question[], image: string){
+    constructor(question: question[]){
         this.question = question;
-        this.image = image;
     }
 
 }
 
 export class question{
-    public awnser: option;
+    public isCurrentQuestion: boolean;
+    public givenAwser!: option;
     public options: option[];
+    public query: string;
 
-    constructor(awnser: option, options: option[]){
-        this.awnser = awnser;
+    constructor(query: string, options: option[]){
         this.options = options;
+        this.query = query;
+        this.isCurrentQuestion = false;
     }
 }
 
 export class option{
     public awnser: string;
+    public isCorrect: boolean;
 
-    constructor(awnser: string){
+    constructor(awnser: string, isCorrect: boolean){
         this.awnser = awnser;
+        this.isCorrect = isCorrect;
     }
 }

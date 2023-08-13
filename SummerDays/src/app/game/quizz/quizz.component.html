@@ -2,23 +2,17 @@
     <app-header/>
     <div class="text-center container">
         <div class="top-container">
-            <h2 style="font-size: xx-large;">Sudoku Puzzle</h2>
-            <div class="img-container"><img src="assets/images/logo.png"></div>
-            <h4>Op donderdag 4 oktober 1943 was
-                de eerste piraten evenement, Hoe 
-                word dit evenement ook wel genoemd?</h4>
+            <div class="img-container"><img src="assets/images/get_connected.png"></div>
+            <h4>{{ quizz.question[currentQuestion].query }}</h4> 
         </div>
 
         <div class="awnser-container">
             <div class="awnsers">
-                <app-antwoord-box class="btn btn-warning btn-lg"/>
-                <app-antwoord-box class="btn btn-warning btn-lg"/>
-                <app-antwoord-box class="btn btn-warning btn-lg"/>
-                <app-antwoord-box class="btn btn-warning btn-lg"/>
+                <app-antwoord-box class="btn btn-warning btn-lg" *ngFor="let option of quizz.question[currentQuestion].options; let i = index"
+                [item]="option"/>
             </div>
             <div class="confirm">
-            <input type="text" class="form-control" placeholder="Antwoord">
-            <button type="button" class="btn btn-success btn-lg">Bevestig antwoord</button>
+            <button type="button" (click)="onSubmit()" class="btn btn-success btn-lg">Bevestig antwoord</button>
         </div>
         </div>
     </div>

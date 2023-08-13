@@ -11,11 +11,12 @@
             4. In elk subrooster mag elk cijver slechts maar 1 keer voorkomen.
         </div>
         <div class="binary">
-            <ng-container *ngFor="let block of awnser let i = index">
+            <ng-container *ngFor="let itemlist of puzzle; let i = index">
                 <div class="clearfix" *ngIf="(i % 3 == 0 && i > 0)"></div>
-                <app-sudoku-grid-item [block]="block"/> 
+                <app-sudoku-grid-item [column]="itemlist"/> 
             </ng-container>
 
+            <button class="btn btn-warning" (click)="saveSolution()">Complete</button>
         </div>
     </div>
 </div>

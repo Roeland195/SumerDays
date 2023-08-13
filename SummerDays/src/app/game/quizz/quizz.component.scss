@@ -4,11 +4,22 @@
     height: 85vh;
     .top-container{
         padding: 0 2em;
+        .img-container{
+            height: 150px;
+            img{
+                height: 100%;
+                width: auto;
+            }
+        }
+        h4{
+            overflow: scroll;
+            height: 80px;
+        }
     }
     .awnser-container{
         padding: 0 1em;
         height: 100%;
-            overflow: scroll;
+            
     }
 }
 
@@ -17,6 +28,7 @@ input{
 }
 
 .btn{
+    padding: 0;
     height: 2.1em;
     width: 100%;
     margin-bottom: 1em;

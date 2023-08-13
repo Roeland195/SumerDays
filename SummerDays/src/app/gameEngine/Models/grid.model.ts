@@ -1,8 +1,8 @@
 export class grid_game{
-    public awnser: item[];
-    public start_position: item[];
+    public awnser: colum[];
+    public start_position: colum[];
 
-    constructor(awser: item[], start_position: item[]){
+    constructor(awser: colum[], start_position: colum[]){
         this.awnser = awser;
         this.start_position = start_position;
     }

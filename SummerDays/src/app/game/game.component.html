@@ -14,7 +14,7 @@
                 (keyup)="addAwnser($event)"
                 type="text"
                 id="name"
-                *ngIf="currentlyPlaying.type == 'question'"
+                *ngIf="currentlyPlaying.type == 'question' || currentlyPlaying.type == 'schrift'"
                 placeholder="Antwoord"
                 formControlName="name"
                 class="form-control">

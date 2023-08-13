@@ -17,7 +17,42 @@ export class GameComponent {
   currentlyPlaying: game;
 
   onSubmit(){
-    if(this.currentlyPlaying.type == 'question'){
+    switch(this.currentlyPlaying.type){
+      case "schrift":
+        this.startQuestion();
+        break;
+      case "question":
+        this.startQuestion();
+      break;
+      case "binary":
+        this.startBinary();
+      break;
+      case "clicker":
+        this.startClicker();
+      break;
+      case "quiz":
+        this.startQuiz();
+      break;
+      case "sudoku":
+        this.startSudoku();
+      break;
+      default:
+        this.starttafel();
+      break;
+    }
+  }
+private starttafel(){this.router.navigate(['home']);}
+
+private startSudoku(){this.router.navigate(['sudoku']);}
+
+private startQuiz(){this.router.navigate(['quizz']);}
+
+private startClicker(){this.router.navigate(['clicker']);}
+
+private startBinary(){this.router.navigate(['binary']);}
+  
+public startQuestion(){
+  if(this.currentlyPlaying.type == 'question' || 'schrift'){
     console.log("Ik ga controleren");
     var team =this.gameLogic.getGroupInfo();
       if(this.currentlyPlaying.awnser == this.givenAwnser){
@@ -35,7 +70,7 @@ export class GameComponent {
         console.log("het antwoord is fout");
         team.games.forEach(x =>{
           if(x.code == this.teamGameItem.code){
-            x.status = "Failed";
+            x.status = "Failure";
             x.succeded = false;
           }
         });
@@ -43,7 +78,18 @@ export class GameComponent {
       }
 
       this.http.put<any>("pool/" + this.gameLogic.getGroupInfo().id ,this.gameLogic.getGroupInfo(), (data) =>
-      {this.router.navigate(['home']);}, ()=>{});
+      {
+        if(this.currentlyPlaying.awnser == this.givenAwnser){
+          var game = this.gameLogic.getCurrentGame();
+          game.teamcolor = team.color;
+          console.log(game);
+          this.http.put<any>("games/" + game.id , game, (data) =>
+         {this.router.navigate(['home']);}, ()=>{});
+        }else{
+          this.router.navigate(['home']);
+        }
+        
+    }, ()=>{});
     }
   }
 

@@ -1,6 +1,7 @@
-<div class="page">
-    <div class="grid_container" *ngFor="let number of block">
-    <button class="grid_item">{{number}}</button>
+<div class="page" *ngIf="column">
+    <div class="grid_container" *ngFor="let item of column.item">
+    <button (click)="changeNumber(item)" class="btn grid_item" [ngClass]="{'btn-info': item.changeable, 'btn-primary': !item.changeable}">
+        <ng-container *ngIf="item.number >= 0">{{ item.number }}</ng-container>
+    </button>
     </div>
-
 </div>

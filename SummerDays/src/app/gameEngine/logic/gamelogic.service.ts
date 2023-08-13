@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { group } from "../Models/group.model";
-import { CurrencyPipe } from "@angular/common";
 import { game } from "../Models/game.model";
+import { grid_game } from "../Models/grid.model";
 
 @Injectable()
 export class gameLogicService{

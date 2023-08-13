@@ -1,8 +1,9 @@
-<div class="page">
-
-    <ng-container class="grid_container" *ngFor="let number of block let i = index">
+<div class="page" *ngIf="column">
+    <ng-container class="grid_container" *ngFor="let item of column.item let i = index">
         <div class="clearfix" *ngIf="(i % 3 == 0 && i > 0)"></div>
-    <button class="grid_item">{{number}}</button>
+    <button (click)="changeNumber(item)" class="btn grid_item" [ngClass]="{'btn-info': item.changeable, 'btn-primary': !item.changeable}">
+        <ng-container *ngIf="item.number >= 0">{{ item.number }}</ng-container>
+    </button>
     </ng-container>
 
 </div>

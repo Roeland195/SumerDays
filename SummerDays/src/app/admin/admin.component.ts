@@ -32,7 +32,7 @@ export class AdminComponent {
       }, ()=>{});
     });
 
-    //this.createGames();
+    this.createGames();
   }
 
   private createGames(){
