@@ -1,20 +1,14 @@
-<section class="game_item">
+<section *ngIf="game" class="game_item" [ngClass]="{'color_green': game.succeded, 'color_red': !game.succeded}">
     <section>
 <h3> {{ game.name }}</h3>
-<h4> Status </h4>
-<h4> Punten </h4>
+<h4> Status {{ game.status }}</h4>
+<h4> Punten {{ game.points }}</h4>
     </section>
     <section class="interaction">
-        <section class="switch_container">
-            <h4> Behaald:</h4>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-        </section>
         <section class="punten_container">
             <h4> Verander Punten:</h4>
-            <input type="number">
+            <input #filterName type="number"(keydown.enter)="changePoints($event)"
+            (keydown.enter)="filterName.value = ''">
         </section>
     </section>
     

@@ -13,20 +13,20 @@
         <section class="group_container">
             <h2>teams</h2>
             <section class="group_list">
-                <app-team-item *ngFor="let team of teams;let i = index"
+                <app-team-item *ngFor="let team of adminService.teams;let i = index"
                 [team]="team"
                 [index]="i +1"></app-team-item>
             </section>
         </section>
         <section class="team_container">
             <h2>Team: connect</h2>
-            <div class="team_list">
+            <div class="team_list" *ngIf="adminService.selectedTeam">
                 <section class="team_header">
                         <h4>Team Code:</h4>
-                        <H4>GHI JKL</H4>
+                        <H4>{{ adminService.selectedTeam.code }}</H4>
                 </section>
                 <section class="play_games_container">
-                    <app-team-game-item *ngFor="let game of gameInfo.games; let i = index"
+                    <app-team-game-item *ngFor="let game of adminService.selectedTeam.games; let i = index"
                     [game]="game"
                     [index]="i"></app-team-game-item>
                 </section>
@@ -37,7 +37,7 @@
         <section class="game_container">
             <h2>Games</h2>
             <div class="games_list">
-                <app-game-admin-item *ngFor="let game of games; let i = index"
+                <app-game-admin-item *ngFor="let game of adminService.games; let i = index"
                 [game]= "game"
                 [index]="i + 1"></app-game-admin-item>
             </div>

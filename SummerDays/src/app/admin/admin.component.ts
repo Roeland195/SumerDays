@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { HttpSercive } from '../http.service';
-import { color } from '../gameEngine/Models/color.model';
 import { group } from '../gameEngine/Models/group.model';
 import { game } from '../gameEngine/Models/game.model';
-import { option, question, quizz } from '../gameEngine/Models/quizz.model';
-import { grid_game } from '../gameEngine/Models/grid.model';
 import { gameInfoService } from '../gameEngine/gameinfo/gameinfo.service';
+import { adminService } from './admin.service';
 
 @Component({
   selector: 'app-admin',
@@ -14,12 +12,11 @@ import { gameInfoService } from '../gameEngine/gameinfo/gameinfo.service';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent {
+  adminService: adminService;
   gameInfo: gameInfoService;
-  teams: group[] = [];
-  games: game[] =[];
-
 
   constructor(private http: HttpSercive){
+    this.adminService = adminService.getInstance();
     this.gameInfo = new gameInfoService();
 
     this.collectTeams();
@@ -60,7 +57,7 @@ export class AdminComponent {
       (data) =>
       {
         console.log(data);
-        this.teams = data.sort((a, b) => b.points - a.points);
+        this.adminService.teams = data.sort((a, b) => b.points - a.points);
 
       });
   }
@@ -83,7 +80,7 @@ export class AdminComponent {
       (data) =>
       {
         console.log(data);
-        this.games = data;
+        this.adminService.games = data;
 
       });
   }
