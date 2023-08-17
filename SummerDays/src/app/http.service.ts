@@ -40,6 +40,12 @@ export class HttpSercive{
         HttpSercive.callImplementation<T>(response, implementation, onFailure);
       });
     }
+
+    public delete<T>(endpoint: string, implementation : (data : T) => void, onFailure: () => void){
+      this.http.delete<HttpResponse<T>>(this.url + endpoint + this.json).subscribe((response) =>{
+        HttpSercive.callImplementation<T>(response, implementation, onFailure);
+      });
+    }
     
     private static callImplementation<T>(response : HttpResponse<T>, implementation : (data : T) => void | null, onFailure : () => void) : void {
         // if error

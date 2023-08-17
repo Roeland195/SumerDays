@@ -46,6 +46,13 @@
                 height: 100%;
                 overflow: scroll;
                 overflow-x: hidden;
+
+                input{
+                    text-align: center;
+                    width: 80%;
+                    font-size: 2em;
+                    margin-bottom: 20px;
+                   }
             }
         }
 
@@ -87,6 +94,7 @@
             grid-template-rows: 10% 89%;
             padding: 1em;
             height: 80vh;
+            
             .group_list{
                 overflow: scroll;
                 overflow-x: hidden;

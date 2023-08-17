@@ -13,11 +13,13 @@ export class question{
     public givenAwser!: option;
     public options: option[];
     public query: string;
+    public file: string;
 
-    constructor(query: string, options: option[]){
+    constructor(query: string, options: option[], file: string){
         this.options = options;
         this.query = query;
         this.isCurrentQuestion = false;
+        this.file = file;
     }
 }
 

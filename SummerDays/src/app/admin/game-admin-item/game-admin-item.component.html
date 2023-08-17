@@ -1,4 +1,4 @@
-<section class="game_item">
+<section class="game_item" [ngStyle]="{'background-color': game.teamcolor }">
     <div>
 <h4> {{ index }}</h4>
 <h3> {{ game.name }}</h3>
@@ -7,6 +7,7 @@
     <div class="code">
         <h4> Code: {{ game.codeblad }} {{ game.codezaal}}</h4>
         <h4> antwoord: {{ game.awnser }}</h4>
+        <h4> punten: {{ game.totalpunten }}</h4>
     </div>
     
 </section>

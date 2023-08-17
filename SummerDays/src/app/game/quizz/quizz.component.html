@@ -2,7 +2,8 @@
     <app-header/>
     <div class="text-center container">
         <div class="top-container">
-            <div class="img-container"><img src="assets/images/get_connected.png"></div>
+            <div class="img-container"><img *ngIf="currentImageFile" src="{{ quizz.question[this.currentQuestion].file }}"></div>
+            <audio controls id="audio" *ngIf="currentMusicFile" src="{{ quizz.question[this.currentQuestion].file }}"><source src="{{ quizz.question[this.currentQuestion].file }}"></audio>
             <h4>{{ quizz.question[currentQuestion].query }}</h4> 
         </div>
 

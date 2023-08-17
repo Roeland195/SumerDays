@@ -7,7 +7,15 @@
             <button (click)="startGame()" class="btn btn-success btn-lg">start pool</button>
         </div>
     </div>
-    <div class="container">
+    <div class="container" *ngIf="!isLoggedIn">
+        <div style="text-align: center;">
+        <h1>Wachtwoord:</h1>
+        <input #filterName (keydown.enter)="enterPassword($event)"
+            (keydown.enter)="filterName.value = ''">
+        </div>
+
+    </div>
+    <div class="container" *ngIf="isLoggedIn">
         <div></div>
         <div></div>
         <section class="group_container">
@@ -36,8 +44,10 @@
 
         <section class="game_container">
             <h2>Games</h2>
-            <div class="games_list">
-                <app-game-admin-item *ngFor="let game of adminService.games; let i = index"
+            <div class="games_list" style="text-align: center;">
+                <input #filterName type="text" (keydown.enter)="search($event)"
+            (keydown.enter)="filterName.value = ''">
+                <app-game-admin-item *ngFor="let game of adminService.filtergames; let i = index"
                 [game]= "game"
                 [index]="i + 1"></app-game-admin-item>
             </div>

@@ -8,6 +8,7 @@ export class adminService{
     selectedTeam: group = new group("","","",[],[],0);
     teams: group[] = [];
     games: game[] =[];
+    filtergames: game[] = [];
 
     private constructor(){}
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { gameLogicService } from '../gameEngine/logic/gamelogic.service';
 import { game } from '../gameEngine/Models/game.model';
-import { group_games } from '../gameEngine/Models/group.model';
+import { group, group_games } from '../gameEngine/Models/group.model';
 import { HttpSercive } from '../http.service';
 import { Router } from '@angular/router';
 
@@ -15,6 +15,8 @@ export class GameComponent {
   gameLogic: gameLogicService;
   givenAwnser: string = "";
   currentlyPlaying: game;
+  correctAwnser: boolean = false;
+  currentImageFile: boolean = false;
 
   onSubmit(){
     switch(this.currentlyPlaying.type){
@@ -52,25 +54,23 @@ private startClicker(){this.router.navigate(['clicker']);}
 private startBinary(){this.router.navigate(['binary']);}
   
 public startQuestion(){
-  if(this.currentlyPlaying.type == 'question' || 'schrift'){
+  if(this.currentlyPlaying.type == 'question' || this.currentlyPlaying.type == 'schrift'){
     console.log("Ik ga controleren");
     var team =this.gameLogic.getGroupInfo();
-      if(this.currentlyPlaying.awnser == this.givenAwnser){
-        console.log("het antwoord is correct");
-        team.points = team.points + this.currentlyPlaying.totalpunten;
-        team.games.forEach(x =>{
-          if(x.code == this.teamGameItem.code){
-            x.points = this.currentlyPlaying.totalpunten;
-            x.status = "Succeeded";
-            x.succeded = true;
-          }
-        });
-        this.gameLogic.setGroupInfo(team);
+    if(this.currentlyPlaying.name == "Wat zullen we eten de hele vergadering lang"){
+      if(this.currentlyPlaying.awnser.includes(this.givenAwnser)){
+        this.correctAwnser = true;
+      }
+    }
+      if(this.currentlyPlaying.awnser.toUpperCase == this.givenAwnser.toUpperCase || this.correctAwnser){
+        this.anwserIsCorrect(team);
       }else{
         console.log("het antwoord is fout");
+        this.correctAwnser = false;
         team.games.forEach(x =>{
           if(x.code == this.teamGameItem.code){
             x.status = "Failure";
+            x.givenawnser = this.givenAwnser;
             x.succeded = false;
           }
         });
@@ -79,7 +79,9 @@ public startQuestion(){
 
       this.http.put<any>("pool/" + this.gameLogic.getGroupInfo().id ,this.gameLogic.getGroupInfo(), (data) =>
       {
-        if(this.currentlyPlaying.awnser == this.givenAwnser){
+        console.log("uitgevoerd");
+        if(this.correctAwnser){
+          this.correctAwnser = false;
           var game = this.gameLogic.getCurrentGame();
           game.teamcolor = team.color;
           console.log(game);
@@ -91,6 +93,26 @@ public startQuestion(){
         
     }, ()=>{});
     }
+  }
+
+  private setImage(){
+    this.currentImageFile = true;
+    console.log("file" + this.currentImageFile);
+  }
+
+  anwserIsCorrect(team: group){
+    this.correctAwnser = true;
+    console.log("het antwoord is correct");
+    team.points = team.points + this.currentlyPlaying.totalpunten;
+    team.games.forEach(x =>{
+      if(x.code == this.teamGameItem.code){
+        x.points = this.currentlyPlaying.totalpunten;
+        x.status = "Succeeded";
+        x.givenawnser = this.givenAwnser;
+        x.succeded = true;
+      }
+    });
+    this.gameLogic.setGroupInfo(team);
   }
 
   addAwnser(event: any){
@@ -111,9 +133,13 @@ public startQuestion(){
           return;
         }
       });
+
+      if(this.currentlyPlaying.image.endsWith('png' || 'jpg' || 'jpeg') ||this.currentlyPlaying.image.endsWith('jpg')||this.currentlyPlaying.image.endsWith('jpeg')){
+        this.setImage();
+      }
     }
 
-    this.teamGameItem = new group_games(this.currentlyPlaying.name, this.currentlyPlaying.codeblad+this.currentlyPlaying.codezaal, "in Progress",0,false);
+    this.teamGameItem = new group_games(this.currentlyPlaying.name, this.currentlyPlaying.codeblad+this.currentlyPlaying.codezaal, "in Progress",0,false,"");
 
     if(!gameAlreadyInPlayedGameList){
       if(!currentTeam.games){

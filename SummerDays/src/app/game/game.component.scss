@@ -3,9 +3,14 @@
     .game-discription{
         padding: 0 2em;
         height: 60vh;
-        p{
-            overflow: scroll;
-            height: 70%;
+        width: 100vw;
+        overflow: scroll;
+        .img-container{
+            text-align: center;
+            width: 100%;
+            img{
+                width: 100%;
+            }
         }
         .rounded {
             border-top: 2px solid black;

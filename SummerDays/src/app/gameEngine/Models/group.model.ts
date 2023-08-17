@@ -23,12 +23,14 @@ export class group_games{
     public points: number;
     public succeded: boolean;
     public code: string;
+    public givenawnser: string;
 
-    constructor(name: string, code: string, status: string, points: number, succeded: boolean){
+    constructor(name: string, code: string, status: string, points: number, succeded: boolean, givenawnser: string){
         this.name = name;
         this.status = status;
         this.points = points;
         this.succeded = succeded;
         this.code = code;
+        this.givenawnser = givenawnser;
     }
 }

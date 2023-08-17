@@ -2,7 +2,7 @@
     <p></p>
         <h1>{{ index }}.</h1>
     <section class="team_container">
-        <div class="name_container">
+        <div class="name_container" [ngStyle]="{'background-color': team.color }">
             <h2> {{ team.name }}</h2>
         </div>
         <section class="player_container">
@@ -14,7 +14,7 @@
             [index]="i"/>
         </div>
         </section>
-        <section class="points">
+        <section class="points" [ngStyle]="{'background-color': team.color }">
             <h2>{{ team.points}}/p</h2>
         </section>
     </section>

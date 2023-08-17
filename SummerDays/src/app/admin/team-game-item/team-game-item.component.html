@@ -1,8 +1,9 @@
 <section *ngIf="game" class="game_item" [ngClass]="{'color_green': game.succeded, 'color_red': !game.succeded}">
     <section>
 <h3> {{ game.name }}</h3>
-<h4> Status {{ game.status }}</h4>
-<h4> Punten {{ game.points }}</h4>
+<h4> Status: {{ game.status }}</h4>
+<h4> Punten: {{ game.points }}</h4>
+<h4> Antwoord: {{ game.givenawnser }}</h4>
     </section>
     <section class="interaction">
         <section class="punten_container">

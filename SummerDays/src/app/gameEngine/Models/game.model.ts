@@ -12,9 +12,10 @@ export class game{
     public totalpunten: number;
     public quizz: quizz;
     public grid_game: grid_game;
+    public image: string;
     id?: string;
 
-    constructor(name: string, totalpunten: number, codeblad: string, codezaal: string, teamcolor: string, type: string, description: string, awnser: string, quizz: quizz, grid_game: grid_game){
+    constructor(name: string, image:string, totalpunten: number, codeblad: string, codezaal: string, teamcolor: string, type: string, description: string, awnser: string, quizz: quizz, grid_game: grid_game){
         this.name = name;
         this.totalpunten = totalpunten;
         this.codeblad = codeblad;
@@ -25,5 +26,6 @@ export class game{
         this.awnser = awnser;
         this.quizz = quizz;
         this.grid_game = grid_game;
+        this.image = image;
     }
 }

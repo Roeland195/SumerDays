@@ -10,7 +10,7 @@ import { group_games } from 'src/app/gameEngine/Models/group.model';
   styleUrls: ['./team-game-item.component.scss']
 })
 export class TeamGameItemComponent implements OnInit {
-  @Input() game: group_games = new group_games("","","",0,false);
+  @Input() game: group_games = new group_games("","","",0,false,'');
   @Input() index: number | undefined;
   adminService: adminService;
 

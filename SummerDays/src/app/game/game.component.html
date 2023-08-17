@@ -4,6 +4,8 @@
         <div class="game-discription">
             <h2>{{ currentlyPlaying.name }}</h2>
             <p>{{ currentlyPlaying.description }}</p>
+            <div class="img-container"><img *ngIf="currentImageFile" src="{{ currentlyPlaying.image }}"></div>
+            
                          <hr class="rounded">
         </div>
 

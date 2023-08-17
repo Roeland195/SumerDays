@@ -22,6 +22,7 @@ export class LandingComponent implements OnInit {
   constructor(private http: HttpSercive, private router: Router){
     this.gameLogic = gameLogicService.getInstance();
     this.members = [];
+
   }
 
   checkIfExistingTeam(name: string)
@@ -43,17 +44,16 @@ export class LandingComponent implements OnInit {
     ).subscribe(
       (data) =>
       {
+        
         data.forEach((team) => 
         {
           if(team.code == name)
           {
-            this.team = new group(team.name, team.code, team.color, team.members, team.games, team.points);
-            if(this.team){
-              haveFoundTeam = true;
-              this.gameLogic.setGroupInfo(this.team);
-              this.router.navigate(['home']);
+            haveFoundTeam = true;
+            this.team = new group(team.name, this.makeid(6), team.color, this.members, [], 0);
+            this.team.code = team.code;
+            this.logIn(); 
               return;
-            }
           }
         });
 
@@ -113,33 +113,36 @@ export class LandingComponent implements OnInit {
       this.team = new group(name, this.makeid(6), chosenColor.color, this.members, [], 0);
       this.http.post<any>("pool", this.team, (data) =>
       {
-
-        this.http.get<any>("/pool")
-        .pipe(
-          map((responseData: {[key: string]: group}) =>{
-            const data: group[] = [];
-            for (const key in responseData){
-              if (responseData.hasOwnProperty(key)){
-                data.push({ ...responseData[key], id: key});
-              }
-            }
-          return data;
-          })
-        )
-        .subscribe(
-          (data) => 
-          {
-            data.forEach(team =>{
-              if(team.code == this.team.code){
-                console.log(team);
-                this.gameLogic.setGroupInfo(team);
-                this.router.navigate(['home']);
-              }
-            });
-          }, () => {}
-        );
+        this.logIn(); 
       }, ()=>{});
     }, ()=>{});
+  }
+
+  logIn(){
+    this.http.get<any>("/pool")
+    .pipe(
+      map((responseData: {[key: string]: group}) =>{
+        const data: group[] = [];
+        for (const key in responseData){
+          if (responseData.hasOwnProperty(key)){
+            data.push({ ...responseData[key], id: key});
+          }
+        }
+      return data;
+      })
+    )
+    .subscribe(
+      (data) => 
+      {
+        data.forEach(team =>{
+          if(team.code == this.team.code){
+            console.log(team);
+            this.gameLogic.setGroupInfo(team);
+            this.router.navigate(['home']);
+          }
+        });
+      }, () => {}
+    );
   }
 
   onSubmit(name: string){

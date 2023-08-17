@@ -14,6 +14,8 @@ import { adminService } from './admin.service';
 export class AdminComponent {
   adminService: adminService;
   gameInfo: gameInfoService;
+  isLoggedIn: boolean = false;
+  isSearching: boolean = false;
 
   constructor(private http: HttpSercive){
     this.adminService = adminService.getInstance();
@@ -21,22 +23,76 @@ export class AdminComponent {
 
     this.collectTeams();
     this.collectGames();
+
+
+    const interval = setInterval(() => {
+      this.collectGames();
+      this.collectTeams();
+      console.log("time");
+    }, 15000);
   }
 
   public startGame(){
-    this.gameInfo.colors.forEach(value =>{
-      this.http.post<any>("colors", value, (data) =>{
-      }, ()=>{});
-    });
-
+    this.deleteColors();
+    this.deleteGames();
+    this.deletePool();
+    this.createColors();
     this.createGames();
   }
 
-  private createGames(){
-    this.gameInfo.games.forEach(value =>{
-      this.http.post<any>("games", value, (data) =>{
+  search(event: any){
+    this.isSearching = true;
+    var searchValue : string = event.target.value;
+    if(searchValue == ""){
+      this.isSearching = false;
+      this.adminService.filtergames = this.adminService.games;
+    }else{
+      this.adminService.filtergames = [];
+      this.adminService.games.forEach(element => {
+        if (element.name.toUpperCase().includes(searchValue.toUpperCase())){
+          this.adminService.filtergames.push(element);
+          console.log(this.adminService.filtergames);
+        }
+      });
+    }
+  }
+
+  enterPassword(event: any){
+    if(event.target.value == "XYZ"){
+      this.isLoggedIn = true;
+      this.collectTeams();
+      this.collectGames();
+    }
+
+  }
+
+  private createColors(){
+        this.gameInfo.colors.forEach(value =>{
+          this.http.post<any>("colors", value, (data) =>{
       }, ()=>{});
     });
+  }
+
+  private deleteColors(){
+      this.http.delete<any>("colors", (data) =>{
+      }, ()=>{});
+  }
+
+  private deletePool(){
+      this.http.delete<any>("pool", (data) =>{
+      }, ()=>{});
+  }
+
+  private createGames(){
+        this.gameInfo.games.forEach(value =>{
+          this.http.post<any>("games", value, (data) =>{
+          }, ()=>{});
+    });
+  }
+
+  private deleteGames(){
+      this.http.delete<any>("games", (data) =>{
+      }, ()=>{});
   }
 
   private collectTeams(){
@@ -81,7 +137,9 @@ export class AdminComponent {
       {
         console.log(data);
         this.adminService.games = data;
-
+        if(!this.isSearching){
+        this.adminService.filtergames = data;
+        }
       });
   }
 }

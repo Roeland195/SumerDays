@@ -4,13 +4,13 @@
     grid-template-columns: 15% 85%;
     .team_container{
         padding: 0;
-        padding-left: 5px;
         border-width: 2px;
         border-color: black;
         border-style: solid;
         display: grid;
         background-color: whitesmoke;
         .name_container{
+            padding-left: 5px;
             grid-column: 1;
             grid-row: 0;
             h2{
@@ -24,6 +24,9 @@
                 overflow: scroll;
                 overflow-x: hidden;
                 height: 150px;
+            }
+            h3{
+                padding-left: 5px;
             }
         }
         .points{
