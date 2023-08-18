@@ -14,7 +14,7 @@ import { adminService } from './admin.service';
 export class AdminComponent {
   adminService: adminService;
   gameInfo: gameInfoService;
-  isLoggedIn: boolean = true;
+  isLoggedIn: boolean = false;
   isSearching: boolean = false;
 
   constructor(private http: HttpSercive){
