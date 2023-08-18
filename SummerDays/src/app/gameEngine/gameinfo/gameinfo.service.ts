@@ -332,25 +332,29 @@ games: game[] =[
                 ])),
     new game("Stapels energie","",0 ,"rBM", "XME", "", "tafel","Stapel zo veel mogelijk suikerklontjes op elkaar voor punten, je mag de suikerklontjes niet naast elkaar zetten. dus je mag alleen maar omhoog stapelen. als de toren omvalt is het voorbij. Doe dit spel bij de spel leiders","0",new quizz([]), new grid_game([],[])),
     new game("Vakantie puzzel","",2 ,"LUG", "eCX", "", "sudoku","Je gaat straks een sudoku puzzel maken, de regels voor een sudoku staan op de volgende pagina nog eens uitgelegd. Success","0",new quizz([]), 
-    new grid_game([ new colum([this.eight,this.two,this.five,  this.three,this.nine,this.zeven,  this.six,this.four,this.one]),
-                    new colum([this.one,this.nine,this.four,  this.six,this.five,this.two,  this.eight,this.zeven,this.three]),
-                    new colum([this.zeven,this.six,this.three,  this.four,this.one,this.eight,  this.two,this.nine,this.five]),
-                    new colum([this.six,this.one,this.two,  this.zeven,this.eight,this.nine,  this.five,this.three,this.four]),
-                    new colum([this.four,this.five,this.nine,  this.two,this.six,this.three,  this.one,this.eight,this.zeven]),
-                    new colum([this.three,this.eight,this.zeven,  this.one,this.four,this.five,  this.nine,this.six,this.two]),
-                    new colum([this.two,this.three,this.one,  this.nine,this.zeven,this.six,  this.four,this.five,this.eight]),
-                    new colum([this.nine,this.zeven,this.eight,  this.five,this.two,this.four,  this.three,this.one,this.six]),
-                    new colum([this.five,this.four,this.six,  this.eight,this.three,this.one,  this.zeven,this.two,this.nine])
+    new grid_game([ new colum([this.six,this.four,this.five,  this.three,this.zeven,this.one,  this.eight,this.nine,this.two]),
+                    new colum([this.one,this.two,this.eight,  this.nine,this.four,this.six,  this.three,this.five,this.zeven]),
+                    new colum([this.zeven,this.three,this.nine,  this.two,this.five,this.eight,  this.one,this.six,this.four]),
+
+                    new colum([this.eight,this.one,this.zeven,  this.six,this.two,this.nine,  this.four,this.three,this.five]),
+                    new colum([this.four,this.nine,this.two,  this.five,this.three,this.zeven,  this.six,this.one,this.eight]),
+                    new colum([this.five,this.six,this.three,  this.one,this.eight,this.four,  this.zeven,this.two,this.nine]),
+
+                    new colum([this.two,this.five,this.four,  this.eight,this.six,this.three,  this.nine,this.zeven,this.one]),
+                    new colum([this.nine,this.zeven,this.six,  this.four,this.one,this.two,  this.five,this.eight,this.three]),
+                    new colum([this.three,this.eight,this.one,  this.zeven,this.nine,this.five,  this.two,this.four,this.six])
                 ],[
-                    new colum([this.open,this.open,this.five,  this.open,this.nine,this.open,  this.open,this.open,this.one]),
-                    new colum([this.open,this.open,this.open,  this.open,this.open,this.two,  this.open,this.zeven,this.three]),
-                    new colum([this.zeven,this.six,this.open,  this.open,this.open,this.eight,  this.two,this.open,this.open]),
-                    new colum([this.open,this.one,this.two,  this.open,this.open,this.nine,  this.open,this.open,this.four]),
-                    new colum([this.open,this.open,this.open,  this.two,this.open,this.three,  this.open,this.open,this.open]),
-                    new colum([this.three,this.open,this.open,  this.one,this.open,this.open,  this.nine,this.six,this.open]),
-                    new colum([this.open,this.open,this.one,  this.nine,this.open,this.open,  this.open,this.five,this.eight]),
-                    new colum([this.nine,this.zeven,this.open,  this.five,this.open,this.open,  this.open,this.open,this.open]),
-                    new colum([this.five,this.open,this.open,  this.open,this.three,this.open,  this.zeven,this.open,this.open])
+                    new colum([this.six,this.four,this.five,  this.open,this.open,this.one,  this.open,this.open,this.open]),
+                    new colum([this.open,this.open,this.open,  this.open,this.open,this.six,  this.open,this.five,this.zeven]),
+                    new colum([this.zeven,this.open,this.open,  this.two,this.open,this.eight,  this.open,this.six,this.open]),
+
+                    new colum([this.eight,this.one,this.open,  this.six,this.two,this.open,  this.open,this.open,this.five]),
+                    new colum([this.four,this.nine,this.open,  this.open,this.three,this.zeven,  this.open,this.open,this.eight]),
+                    new colum([this.open,this.open,this.open,  this.open,this.open,this.open,  this.zeven,this.open,this.nine]),
+
+                    new colum([this.open,this.open,this.open,  this.eight,this.open,this.three,  this.nine,this.open,this.open]),
+                    new colum([this.open,this.open,this.open,  this.four,this.open,this.open,  this.five,this.open,this.three]),
+                    new colum([this.open,this.eight,this.one,  this.zeven,this.open,this.open,  this.open,this.open,this.open])
 ])),
     new game("Fly you fools","",2 ,"Snq", "rRG", "", "tafel","Maak een papieren vliegtuig die kan vliegen. En laat dit zijn bij de spel leiders","0",new quizz([]), new grid_game([],[])),
     new game("Take a change on me","",0 ,"LsP", "voQ", "", "tafel","Ja gaat bij een spelleider straks een aantal dobbelstenen rollen. namelijk een D4, D6, D8, D10, op elke rol moet je het hoogste hebben gerold wat er is. Wanneer een dobbelsteen bij de eerste keer rollen dit behaald, mag deze aan het eind gerold worden voor extra punten.","0",new quizz([]), new grid_game([],[])),
