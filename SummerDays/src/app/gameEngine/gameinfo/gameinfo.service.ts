@@ -331,7 +331,7 @@ games: game[] =[
                     new colum([this.zero,this.open,this.open,this.open,this.open,this.open,this.zero,this.open])
                 ])),
     new game("Stapels energie","",0 ,"rBM", "XME", "", "tafel","Stapel zo veel mogelijk suikerklontjes op elkaar voor punten, je mag de suikerklontjes niet naast elkaar zetten. dus je mag alleen maar omhoog stapelen. als de toren omvalt is het voorbij. Doe dit spel bij de spel leiders","0",new quizz([]), new grid_game([],[])),
-    new game("Vakantie puzzel","",2 ,"LUG", "eCX", "", "sudoku","Je gaat straks een sudoku puzzel maken, de regels voor een sudoku staan op de volgende pagina nog eens uitgelegd. Success","0",new quizz([]), 
+    new game("Vakantie puzzel","",4 ,"LUG", "eCX", "", "sudoku","Je gaat straks een sudoku puzzel maken, de regels voor een sudoku staan op de volgende pagina nog eens uitgelegd. Success","0",new quizz([]), 
     new grid_game([ new colum([this.six,this.four,this.five,  this.three,this.zeven,this.one,  this.eight,this.nine,this.two]),
                     new colum([this.one,this.two,this.eight,  this.nine,this.four,this.six,  this.three,this.five,this.zeven]),
                     new colum([this.zeven,this.three,this.nine,  this.two,this.five,this.eight,  this.one,this.six,this.four]),
