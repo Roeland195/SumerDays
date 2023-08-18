@@ -10,13 +10,13 @@
         </div>
 
         <form>
-            <div class="form-group col-xs-12 input">
+            <div class="form-group col-xs-12 input" style="margin-top: 10px;">
                 <input
                 #teamName
                 (keyup)="addAwnser($event)"
                 type="text"
                 id="name"
-                *ngIf="currentlyPlaying.type == 'question' || currentlyPlaying.type == 'schrift'"
+                *ngIf="currentlyPlaying.type == 'question' || currentlyPlaying.type == 'schrift' || currentlyPlaying.type == 'zoek'"
                 placeholder="Antwoord"
                 formControlName="name"
                 class="form-control">

@@ -9,7 +9,7 @@
 
         <div class="awnser-container">
             <div class="awnsers">
-                <app-antwoord-box class="btn btn-warning btn-lg" *ngFor="let option of quizz.question[currentQuestion].options; let i = index"
+                <app-antwoord-box class="awnserbox" *ngFor="let option of quizz.question[currentQuestion].options; let i = index"
                 [item]="option"/>
             </div>
             <div class="confirm">

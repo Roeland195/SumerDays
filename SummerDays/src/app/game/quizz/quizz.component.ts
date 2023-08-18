@@ -39,6 +39,7 @@ export class QuizzComponent {
   }
 
   private setMusic(){
+    
     this.currentMusicFile = true
     console.log("file" + this.currentMusicFile);
   }
@@ -53,6 +54,7 @@ export class QuizzComponent {
   }
 
   private endGame(){
+    console.log("endgame");
     var team = this.gameLogic.getGroupInfo();
     team.points = team.points + this.pointTotal;
     team.games.forEach(x =>{

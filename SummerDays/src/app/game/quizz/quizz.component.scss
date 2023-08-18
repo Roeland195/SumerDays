@@ -1,8 +1,10 @@
 .container{
     display: grid;
     padding: 0;
+    
     height: 85vh;
     .top-container{
+        margin-top: 5px;
         padding: 0 2em;
         .img-container{
             height: 150px;
@@ -28,9 +30,3 @@ input{
     margin-bottom: 1em;
 }
 
-.btn{
-    padding: 0;
-    height: 2.1em;
-    width: 100%;
-    margin-bottom: 1em;
-}

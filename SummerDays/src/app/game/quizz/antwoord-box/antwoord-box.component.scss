@@ -1,12 +1,12 @@
-.green{
-    background-color: green;
-}
-
-.red{
-    background-color: red;
-}
-
-h4{
+section{
+    line-height: 1.5em;
+    margin-bottom: 5px;
     overflow: scroll;
-    overflow-x: hidden;
+    text-overflow: ellipsis;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: #ffc107;
+    background-color: #ffe28a;
+    width: 100%;
+    border-radius: 20px;
 }

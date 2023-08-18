@@ -30,14 +30,14 @@ colors: color[] = [
 ];
 
 games: game[] =[
-    new game("Schat zoekers","assets/images/schatzoeker.jpg",2 ,this.makeid(3), this.makeid(3), "", "question", "Gegroet schatzoekers, mijn naam is kapitein blackbeard, en ik heb mijn schat verstopt op een van deze eilanden. De schat vol punten kan voor jouw groep zijn, om het juiste eiland te vinden hoef je alleen meer deze simpele instructies op te volgen.het eiland dat je zoekt is naast een eiland met palmbomen. het eiland kan niet naast een eiland liggen die de zelfde zee hebben. Op het eiland groeien palmbomen.", "8",new quizz([]), new grid_game([],[])),
-    new game("De rode lijn","assets/images/knots.png",3 ,this.makeid(3),this.makeid(3), "", "question","Help connecters, Ik weet niet meer hoe ik dit bereken, kunnen jullie dit voor mij oplossen? Zoals hier te zien is, staat hier een kwart van een cirkel. Met daarin een rechthoek ABCD, die de rand van de cirkel raakt bij putn B. als we aannemen dan punt C het miden is van de cirkel hoelang is de diagonale lijn AD?","430",new quizz([]), new grid_game([],[])),
-    new game("Noord, Oost, Zuid, West","assets/images/shipyard.jpg",2 ,this.makeid(3), this.makeid(3), "", "question","Ik heb hier een koraal riff kaart, met daarin een paar gezonken schepen. Ik kan alleen maar 1 keer duiken. In welk schip kan ik de punten vinden? De punten zijn de vinden in het schip waarmee je na het volgen van deze instructies oog in oog met de ochtend zon komt te staan. Loop het schip bij de voorkant uit en ga naar links, bij het eerste kruispunt die je tegenkomt ga naar rechts. Ga vervolgens nog een keer rechts bij het kruispunt daarna, kom je oog in oog met de ochtend zon.","HMS Interceptor",new quizz([]), new grid_game([],[])),
-    new game("Wat zullen we eten de hele vergadering lang","assets/images/hoofdkwartier.jpg",3 ,this.makeid(3), this.makeid(3), "", "question","Oh nee zes connect leiders konden tijdens de vergadering niet besluiten wat ze wilde bestellen en willen nu niet meer naast elkaar zitten om deze reden. Alle leiders kunnen voor dit spel niet overweg met de leiding direct boven en direct onder henzelf zitten. Daarnaast willen leiding 3 en 5 niet naast elkaar zitten want 3 wilde KFC halen en 5 Macdonalds. Leiding 1 is alvast gaan zitten en weigerd om op te staan, kan je ze zo neerzetten dat ze weer met elkaar aan tafel kunnen? Vul de getallen in de juiste volgorde beginnend met 1, draai met de klok mee. Bijv: 123456","136425 152463",new quizz([]), new grid_game([],[])),
-    new game("I want it that way","",2 ,this.makeid(3), this.makeid(3), "", "question","Er zijn 5 verdachten op gepakt, en de politie wilt alleen de persoon die de waarheid spreekt vrijlaten. Wie spreekt hier de waarheid. /Jaap: One of us is lying Maartje: Two of us are lying. /Rosalie: Three of us are lying/ /Arie: Four of us are lying. /Niels: All five of us aren't telling the truth.","arie",new quizz([]), new grid_game([],[])),
-    new game("1 tot 120","",4 ,this.makeid(3), this.makeid(3), "", "question","Hoevaak komt het getal 1 voor als je van 0 tot en met 120 zou tellen.","53",new quizz([]), new grid_game([],[])),
-    new game("Breek het scherm","",0 ,this.makeid(3), this.makeid(3), "", "clicker","Je krijgt 20 seconde om ze veel mogelijk punten te scoren in dit spel","0",new quizz([]), new grid_game([],[])),
-    new game("Het grote boek","",0 ,this.makeid(3),this.makeid(3), "", "quiz","Je krijgt straks een aantal vragen elke vraag is 1 punt waard.","0",
+    new game("Schat zoekers","assets/images/schatzoeker.jpg",2 , "CHx", "hDO", "", "question", "Gegroet schatzoekers, mijn naam is kapitein blackbeard, en ik heb mijn schat verstopt op een van deze eilanden. De schat vol punten kan voor jouw groep zijn, om het juiste eiland te vinden hoef je alleen meer deze simpele instructies op te volgen.het eiland dat je zoekt is naast een eiland met palmbomen. het eiland kan niet naast een eiland liggen die de zelfde zee hebben. Op het eiland groeien palmbomen.", "8",new quizz([]), new grid_game([],[])),
+    new game("De rode lijn","assets/images/knots.png",3 ,"qTt","Ecp", "", "question","Help connecters, Ik weet niet meer hoe ik dit bereken, kunnen jullie dit voor mij oplossen? Zoals hier te zien is, staat hier een kwart van een cirkel. Met daarin een rechthoek ABCD, die de rand van de cirkel raakt bij punt B. als we aannemen dan punt C het miden is van de cirkel hoelang is de diagonale lijn AD?","430",new quizz([]), new grid_game([],[])),
+    new game("Noord, Oost, Zuid, West","assets/images/shipyard.jpg",2 ,"Ecp", "xOx", "", "question","Ik heb hier een koraal riff kaart, met daarin een paar gezonken schepen. Ik kan alleen maar 1 keer duiken. In welk schip kan ik de punten vinden? De punten zijn te vinden in het schip waarmee je na het volgen van deze instructies oog in oog met de ochtend zon komt te staan. Loop het schip bij de voorkant uit en ga naar links, bij het eerste kruispunt die je tegenkomt ga naar rechts. Ga vervolgens nog een keer rechts bij het kruispunt daarna, kom je oog in oog met de ochtend zon.","HMS Interceptor",new quizz([]), new grid_game([],[])),
+    new game("Wat zullen we eten de hele vergadering lang","assets/images/hoofdkwartier.jpg",3 ,"cUU", "bGy", "", "question","Oh nee zes connect leiders konden tijdens de vergadering niet besluiten wat ze wilde bestellen en willen nu niet meer naast elkaar zitten om deze reden. Alle leiders kunnen voor dit spel niet overweg met de leiding direct boven en direct onder henzelf zitten. Daarnaast willen leiding 3 en 5 niet naast elkaar zitten want 3 wilde KFC halen en 5 Macdonalds. Leiding 1 is alvast gaan zitten en weigerd om op te staan, kan je ze zo neerzetten dat ze weer met elkaar aan tafel kunnen? Vul de getallen in de juiste volgorde beginnend met 1, draai met de klok mee. Bijv: 123456","136425 152463",new quizz([]), new grid_game([],[])),
+    new game("I want it that way","assets/images/verdachten.jpg",2 ,"iEM", "aQy", "", "question","Er zijn 5 verdachten op gepakt, en de politie wilt alleen de persoon die de waarheid spreekt vrijlaten. Wie spreekt hier de waarheid. /Jaap: 1 van ons liegt. Maartje: 2 van ons is aan het liegen. /Rosalie: 3 van ons is aan het liegen. /Arie: 4 van ons liegen. /Niels: wij zijn alle 5 niet de waarheid aan het vertellen.","arie",new quizz([]), new grid_game([],[])),
+    new game("1 tot 120","",4 ,"FWg", "LPy", "", "question","Hoevaak komt het getal 1 voor als je van 0 tot en met 120 zou tellen.","53",new quizz([]), new grid_game([],[])),
+    new game("Breek het scherm","",0 ,"UDc", "LdD", "", "clicker","Je krijgt 20 seconde om ze veel mogelijk punten te scoren in dit spel","0",new quizz([]), new grid_game([],[])),
+    new game("Het grote boek","",0 ,"bJv","CVO", "", "quiz","Je krijgt straks een aantal vragen elke vraag is 1 punt waard.","0",
     new quizz([ new question("Met welk beest raakte Bileam in discussie?",[
                     new option("Ezel", true),
                     new option("Duif", false),
@@ -60,7 +60,7 @@ games: game[] =[
                     new option("Een Boom", true),
                     new option("De Farao", false),
                     new option("Judas", false),
-                    new option("Een Deur", false)],
+                    new option("Een Struik", false)],
                     "assets/images/bijbel.jpg"),
                 new question("Wat was de reden dat god 2 beren op een stel kinderen afstuurde, waardoor er 42 kinderen stierven? ",[
                     new option("De kinderen zaten vast in een gat", false),
@@ -68,7 +68,7 @@ games: game[] =[
                     new option("De kinderen waren de beren al aan het uitdagen", false),
                     new option("Geen reden gegeven", false)],
                     "assets/images/bear.jpg"),
-                new question("Welk boek in de Bijbel is het enige boek waarin de naam van God nooit wordt genoemd?",[
+                new question("Welk boek in deze antwoorden wordt de naam van God nooit genoemd?",[
                     new option("Amos", false),
                     new option("Spreuken", false),
                     new option("Ester", true),
@@ -82,7 +82,7 @@ games: game[] =[
                     "assets/images/ark.jpeg"),
                 new question("Hoe moeten we volgens Jezus onze familie behandelen?",[
                     new option("We moeten onze vader en moeder eren", false),
-                    new option("We moeten ouders, broers en zusters haten", false),
+                    new option("We moeten ouders, broers en zusters, vrouw en kindern haten", false),
                     new option("We moeten ouders, broers en zusters verlaten", false),
                     new option("Alle drie de antwoorden hierboven zijn correct", true)],
                     ""),
@@ -99,7 +99,7 @@ games: game[] =[
                     new option("Jozef en Maria", false)],
                     "assets/music/Wilhelmus.mp3"),
 ]), new grid_game([],[])),
-    new game("Muziek liefhebber","",0 ,this.makeid(3), this.makeid(3), "", "quiz","Je krijgt straks een aantal vragen elke vraag is 1 punt waard.","0",
+    new game("Muziek liefhebber","",0 ,"bJx", "CVO", "", "quiz","Je krijgt straks een aantal vragen elke vraag is 1 punt waard.","0",
     new quizz([ new question("Hoeveel nog bestaande landen komen in dit nummer voor?",[
                     new option("11", true),
                     new option("12", false),
@@ -137,7 +137,7 @@ games: game[] =[
                     new option("6", false)],
                     "assets/music/smurfen.mp3"),
                 new question("Uit welke film komt dit nummer?",[
-                    new option("Moana", true),
+                    new option("Vaiana", true),
                     new option("Aladdin", false),
                     new option("Pocahontas", false),
                     new option("Mulan", false)],
@@ -161,7 +161,7 @@ games: game[] =[
                     new option("Inception", false)],
                     "assets/music/fast.mp3"),
 ]), new grid_game([],[])),
-    new game("Weet ik veel","",0 ,this.makeid(3), this.makeid(3), "", "quiz","Je krijgt straks een aantal vragen elke vraag is 1 punt waard.","0",
+    new game("Weet ik veel","",0 ,"Baw", "kBE", "", "quiz","Je krijgt straks een aantal vragen elke vraag is 1 punt waard.","0",
     new quizz([ new question("Welk dier heeft een oorlog gewonnen tegen Australië?",[
                     new option("Kangoeroes", false),
                     new option("Emoes", true),
@@ -224,7 +224,7 @@ games: game[] =[
                     "assets/images/monty.jpg"),
 
 ]), new grid_game([],[])),
-    new game("Hier weet ik alles van","",0 ,this.makeid(3), this.makeid(3), "", "quiz","Je krijgt straks een aantal vragen elke vraag is 1 punt waard.","0",
+    new game("Hier weet ik alles van","",0 ,"CKt", "mvj", "", "quiz","Je krijgt straks een aantal vragen elke vraag is 1 punt waard.","0",
     new quizz([ new question("Wat is de naam van dit nummer?",[ 
                     new option("Swan lake", false),
                     new option("Carmen Suite No.2", true),
@@ -262,7 +262,7 @@ games: game[] =[
                     new option("Catorb", false)],
                     "assets/images/quokka.jpg"),
                 new question("Welke achternaam komt in Nederland het meeste voor?",[ 
-                    new option("Jansen", false),
+                    new option("Van der Meij", false),
                     new option("Van Delft", false),
                     new option("De Vries", false),
                     new option("De Jong", true)],
@@ -290,28 +290,28 @@ games: game[] =[
 
 
 
-    new game("Een met de natuur","",2 ,this.makeid(3), this.makeid(3), "", "foto","Maak een foto waarbij minstens 3 mensen uit je groepje een boom knuffelt.","0",new quizz([]), new grid_game([],[])),
-    new game("Walk like a eqyptian","",3 ,this.makeid(3), this.makeid(3), "", "foto","Maak met je groepje een piramide waar iedereen opstaat.","0",new quizz([]), new grid_game([],[])),
-    new game("Are house, in the middle of Kerkstraat","",4 ,this.makeid(3), this.makeid(3), "", "foto","Maak een kaartenhuis en zet deze op de foto. Er moet minimaal 7 kaarten op staan.","0",new quizz([]), new grid_game([],[])),
-    new game("C.O.N.N.E.C.T","",3 ,this.makeid(3), this.makeid(3), "", "foto","Je gaat met je groepje het woord Connect spellen en maakt hier foto’s van. De bedoeling is dat je iedereen in groepje terug te vinden is in een of meerdere foto’s. Verder mag je alleen je lichaam gebruiken om de letters te vormen.","0",new quizz([]), new grid_game([],[])),
-    new game("Blokje om","",4 ,this.makeid(3), this.makeid(3), "", "question","Je krijgt een geheime boodschap en deze moet je ontcijferen. Haal deze op bij de spelleiders.","geniet op alle dagen van je leven die god je heeft gegeven",new quizz([]), new grid_game([],[])),
-    new game("Wat zeg je?","assets/images/polybius.png",4 ,this.makeid(3), this.makeid(3), "", "question","Je krijgt een geheime boodschap en deze moet je ontcijferen. Haal deze op bij de spelleiders.","zoals gepland loopt alles anders",new quizz([]), new grid_game([],[])),
-    new game("Schrijf maar wat op","assets/images/asi.png",6 ,this.makeid(3), this.makeid(3), "", "question","Je krijgt een geheime boodschap en deze moet je ontcijferen. Haal deze op bij de spelleiders.","Hallo",new quizz([]), new grid_game([],[])),
-    new game("Identiek","assets/images/zoekeen.jpg",2 ,this.makeid(3), this.makeid(3), "", "zoek","Hoeveeel verschillen zitten er in deze 2 foto's.","4",new quizz([]), new grid_game([],[])),
-    new game("There the same picture","assets/images/zoektwee.png",2 ,this.makeid(3), this.makeid(3), "", "zoek","Hoeveeel verschillen zitten er in deze 2 foto's.","7",new quizz([]), new grid_game([],[])),
-    new game("It's both you're locker","assets/images/zoekdrie.png",2 ,this.makeid(3), this.makeid(3), "", "zoek","Hoeveeel verschillen zitten er in deze 2 foto's.","5",new quizz([]), new grid_game([],[])),
-    new game("Sequals en Prequals","",3 ,this.makeid(3), this.makeid(3), "", "tafel","Met je groepje ga je alle bijbelboeken van het nieuwe testament opnoemen. Om de opdracht te hallen moet iedereen uit je groepje bijbelboeken opnoemen. Ook moeten de bijbelboeken op volgorde opgenoemd worden. Om de opdracht te voltooien en punten te verdienen moet je bij de spelleider (Maaike) achterelkaar de bijbelboeken opnoemen.","0",new quizz([]), new grid_game([],[])),
-    new game("Finding love","assets/images/teddy.png",2 ,this.makeid(3), this.makeid(3), "", "tafel","Zoek deze teddie beer","0",new quizz([]), new grid_game([],[])),
-    new game("In de maneschijn in e maneschijn","assets/images/maneschijn.png",3 ,this.makeid(3), this.makeid(3), "", "tafel","Zoek het boek in de manenschijn","0",new quizz([]), new grid_game([],[])),
-    new game("Fellowship of the ring","assets/images/ring.jpeg",3 ,this.makeid(3), this.makeid(3), "", "tafel","Zoek de ring that rules them all","0",new quizz([]), new grid_game([],[])),
-    new game("We gaan op jacht","assets/images/elk.png",2 ,this.makeid(3), this.makeid(3), "", "tafel","Zoek dit rendier","0",new quizz([]), new grid_game([],[])),
-    new game("Legolas GreenLeaf","",3 ,this.makeid(3), this.makeid(3), "", "tafel","Een elfje moet uit elf woorden en vijf regels bestaan. Op de eerste regel van een elfje staat slechts één woord. Op de tweede regel staan twee woorden, op derde regel drie woorden, op de vierde regel vier woorden en op de vijfde regel staat weer één woord. De laatste regel moet het gedicht samenvatten in één woord. Om de punten te behalen roep het elfje op bij Maaike want die snapt dit.","0",new quizz([]), new grid_game([],[])),
-    new game("Gezins uitbreiding","",2 ,this.makeid(3), this.makeid(3), "", "tafel","Bedenk bij elke letter uit het alfabet een naam en schrijf dit op, Wanneer je bij elke letter een naam hebt staan lever je dit in bij de spelleider.","0",new quizz([]), new grid_game([],[])),
-    new game("Alfabet soep","",2 ,this.makeid(3), this.makeid(3), "", "tafel","Jullie gaan met je groepje het alfabet opnoemen bij de spelleider. Je mag maar 1 letter per persoon opnoemen, als iedereen is geweest beginnen we weer van voor af aan.","0",new quizz([]), new grid_game([],[])),
-    new game("Are you nuts?","",3 ,this.makeid(3), this.makeid(3), "", "question","Tell hoeveel noten er in deze bak zitten","53",new quizz([]), new grid_game([],[])),
-    new game("Notenkraker","",3 ,this.makeid(3), this.makeid(3), "", "question","Tell hoeveel noten er in deze bak zitten","46",new quizz([]), new grid_game([],[])),
-    new game("Het grote smurfen dorp","",1 ,this.makeid(3), this.makeid(3), "", "tafel","Verzin voor iedereen in je groep een smurfen naam.","0",new quizz([]), new grid_game([],[])),
-    new game("Biep boop boop piep","",4 ,this.makeid(3), this.makeid(3), "", "binary","Je gaat straks een Binary puzzel maken, de regels van de binary puzzel staat op de volgende pagina. Success","0",new quizz([]), 
+    new game("Een met de natuur","",2 ,"vGB", "gLx", "", "foto","Maak een foto waarbij minstens 3 mensen uit je groepje een boom knuffelt.","0",new quizz([]), new grid_game([],[])),
+    new game("Walk like a eqyptian","",3 ,"YvD", "wvu", "", "foto","Maak met je groepje een piramide waar iedereen opstaat.","0",new quizz([]), new grid_game([],[])),
+    new game("Are house, in the middle of Kerkstraat","",4 ,"Eim", "PJZ", "", "foto","Maak een kaartenhuis en zet deze op de foto. Er moet minimaal 7 kaarten op staan.","0",new quizz([]), new grid_game([],[])),
+    new game("C.O.N.N.E.C.T","",3 ,"Eim", "JJZ", "", "foto","Je gaat met je groepje het woord Connect spellen en maakt hier foto's van. De bedoeling is dat je iedereen uit je groepje terug te vinden is in een of meerdere foto's. Verder mag je alleen je lichaam gebruiken om de letters te vormen.","0",new quizz([]), new grid_game([],[])),
+    new game("Blokje om","assets/images/blokjes.jpeg",4 ,"QxT", "ZJE", "", "question","Je krijgt een geheime boodschap en deze moet je ontcijferen. Haal deze op bij de spelleiders.","geniet op alle dagen van je leven die god je heeft gegeven",new quizz([]), new grid_game([],[])),
+    new game("Wat zeg je?","assets/images/polybius.png",4 ,"QxT", "ZJE", "", "question","Je krijgt een geheime boodschap en deze moet je ontcijferen. Haal deze op bij de spelleiders.","zoals gepland loopt alles zoals Pieter wil",new quizz([]), new grid_game([],[])),
+    new game("Schrijf maar wat op","assets/images/asi.png",6 ,"edt", "cOh", "", "question","Je krijgt een geheime boodschap en deze moet je ontcijferen. Haal deze op bij de spelleiders.","Hallo",new quizz([]), new grid_game([],[])),
+    new game("Identiek","assets/images/zoekeen.jpg",2 ,"KVt", "ZuK", "", "zoek","Hoeveeel verschillen zitten er in deze 2 foto's.","4",new quizz([]), new grid_game([],[])),
+    new game("There the same picture","assets/images/zoektwee.png",2 ,"vTz", "Fod", "", "zoek","Hoeveeel verschillen zitten er in deze 2 foto's.","7",new quizz([]), new grid_game([],[])),
+    new game("It's both you're locker","assets/images/zoekdrie.png",2 ,"tvL", "qPU", "", "zoek","Hoeveeel verschillen zitten er in deze 2 foto's.","5",new quizz([]), new grid_game([],[])),
+    new game("Sequals en Prequals","",3 ,"Cjo", "ZWb", "", "tafel","Met je groepje ga je alle bijbelboeken van het nieuwe testament opnoemen. Om de opdracht te hallen moet iedereen uit je groepje bijbelboeken opnoemen. Ook moeten de bijbelboeken op volgorde opgenoemd worden. Om de opdracht te voltooien en punten te verdienen moet je bij de spelleiders achterelkaar de bijbelboeken opnoemen.","0",new quizz([]), new grid_game([],[])),
+    new game("Finding love","assets/images/teddy.png",2 ,"pjD", "ELz", "", "tafel","Zoek deze teddie beer","0",new quizz([]), new grid_game([],[])),
+    new game("In de maneschijn in e maneschijn","assets/images/maneschijn.png",3 ,"jsa", "dTh", "", "tafel","Zoek het boek in de manenschijn","0",new quizz([]), new grid_game([],[])),
+    new game("Fellowship of the ring","assets/images/ring.jpeg",3 ,"yhw", "AxH", "", "tafel","Zoek de ring that rules them all","0",new quizz([]), new grid_game([],[])),
+    new game("We gaan op jacht","assets/images/elk.png",2 ," LjH", " LQO", "", "tafel","Zoek dit rendier","0",new quizz([]), new grid_game([],[])),
+    new game("Legolas GreenLeaf","",3 ,"YRZ", "dRs", "", "tafel","Een elfje moet uit elf woorden en vijf regels bestaan. Op de eerste regel van een elfje staat slechts één woord. Op de tweede regel staan twee woorden, op derde regel drie woorden, op de vierde regel vier woorden en op de vijfde regel staat weer één woord. De laatste regel moet het gedicht samenvatten in één woord. Om de punten te behalen, roep het elfje bij de spel leiders op.","0",new quizz([]), new grid_game([],[])),
+    new game("Gezins uitbreiding","",2 ,"Ktz", "YVa", "", "tafel","Bedenk bij elke letter uit het alfabet een naam en schrijf dit op, Wanneer je bij elke letter een naam hebt staan lever je dit in bij de spelleider.","0",new quizz([]), new grid_game([],[])),
+    new game("Alfabet soep","",2 ,"TYP", "Xen", "", "tafel","Jullie gaan met je groepje het alfabet opnoemen bij de spelleider. Je mag maar 1 letter per persoon opnoemen, als iedereen is geweest beginnen we weer van voor af aan.","0",new quizz([]), new grid_game([],[])),
+    new game("Are you nuts?","",3 ,"ZDf", "afb", "", "question","Tell hoeveel noten er in deze bak zitten","53",new quizz([]), new grid_game([],[])),
+    new game("Notenkraker","",3 ,"dLS", "yVm", "", "question","Tell hoeveel noten er in deze bak zitten","46",new quizz([]), new grid_game([],[])),
+    new game("Het grote smurfen dorp","",1 ,"gQK", "geI", "", "tafel","Verzin voor iedereen in je groep een smurfen naam. En noem deze op bij de sel leijders","0",new quizz([]), new grid_game([],[])),
+    new game("Biep boop boop piep","",4 ," hyX", " LAj", "", "binary","Je gaat straks een Binary puzzel maken, de regels van de binary puzzel staat op de volgende pagina. Success","0",new quizz([]), 
     new grid_game([ new colum([this.one,this.zero,this.zero,this.one,this.zero,this.one,this.one,this.zero]),
                     new colum([this.one,this.zero,this.one,this.zero,this.one,this.zero,this.zero,this.one]),
                     new colum([this.zero,this.one,this.one,this.zero,this.one,this.one,this.zero,this.zero]),
@@ -330,8 +330,8 @@ games: game[] =[
                     new colum([this.open,this.open,this.open,this.zero,this.open,this.one,this.open,this.open]),
                     new colum([this.zero,this.open,this.open,this.open,this.open,this.open,this.zero,this.open])
                 ])),
-    new game("Stapels energie","",0 ,this.makeid(3), this.makeid(3), "", "tafel","Stapel zo veel mogelijk suikerklontjes op elkaar voor punten, je mag de suikerklontjes niet naast elkaar zetten. dus je mag alleen maar omhoog stapelen. als de toren omvalt is het voorbij.","0",new quizz([]), new grid_game([],[])),
-    new game("Vakantie puzzel","",2 ,this.makeid(3), this.makeid(3), "", "sudoku","Je gaat straks een sudoku puzzel maken, de regels voor een sudoku staan op de volgende pagina nog eens uitgelegd. Success","0",new quizz([]), 
+    new game("Stapels energie","",0 ,"rBM", "XME", "", "tafel","Stapel zo veel mogelijk suikerklontjes op elkaar voor punten, je mag de suikerklontjes niet naast elkaar zetten. dus je mag alleen maar omhoog stapelen. als de toren omvalt is het voorbij. Doe dit spel bij de spel leiders","0",new quizz([]), new grid_game([],[])),
+    new game("Vakantie puzzel","",2 ,"LUG", "eCX", "", "sudoku","Je gaat straks een sudoku puzzel maken, de regels voor een sudoku staan op de volgende pagina nog eens uitgelegd. Success","0",new quizz([]), 
     new grid_game([ new colum([this.eight,this.two,this.five,  this.three,this.nine,this.zeven,  this.six,this.four,this.one]),
                     new colum([this.one,this.nine,this.four,  this.six,this.five,this.two,  this.eight,this.zeven,this.three]),
                     new colum([this.zeven,this.six,this.three,  this.four,this.one,this.eight,  this.two,this.nine,this.five]),
@@ -352,11 +352,11 @@ games: game[] =[
                     new colum([this.nine,this.zeven,this.open,  this.five,this.open,this.open,  this.open,this.open,this.open]),
                     new colum([this.five,this.open,this.open,  this.open,this.three,this.open,  this.zeven,this.open,this.open])
 ])),
-    new game("Fly you fools","",2 ,this.makeid(3), this.makeid(3), "", "tafel","Maak een papieren vliegtuig die kan vliegen.","0",new quizz([]), new grid_game([],[])),
-    new game("Take a change on me","",0 ,this.makeid(3), this.makeid(3), "", "tafel","Ja gaat bij een spelleider straks een aantal dobbelstenen rollen. namelijk een D4, D6, D8, D10, op elke rol moet je het hoogste hebben gerold wat er is. Wanneer een dobbelsteen bij de eerste keer rollen dit behaald, mag deze aan het eind gerold worden voor extra punten.","0",new quizz([]), new grid_game([],[])),
-    new game("Reken Kracht","",2 ,this.makeid(3), this.makeid(3), "", "question","Wat is 5+2*(2-3*4)","-15",new quizz([]), new grid_game([],[])),
-    new game("1 + 1 is Raampje","",2 ,this.makeid(3), this.makeid(3), "", "question","Wat is (2*6-8)+(24-9/3)","25",new quizz([]), new grid_game([],[])),
-    new game("Alle eentjes zwemmen in het water","",2 ,this.makeid(3), this.makeid(3), "", "question","Wat is 1+111+1*(1+1+11+1)","126",new quizz([]), new grid_game([],[])),
+    new game("Fly you fools","",2 ,"Snq", "rRG", "", "tafel","Maak een papieren vliegtuig die kan vliegen. En laat dit zijn bij de spel leiders","0",new quizz([]), new grid_game([],[])),
+    new game("Take a change on me","",0 ,"LsP", "voQ", "", "tafel","Ja gaat bij een spelleider straks een aantal dobbelstenen rollen. namelijk een D4, D6, D8, D10, op elke rol moet je het hoogste hebben gerold wat er is. Wanneer een dobbelsteen bij de eerste keer rollen dit behaald, mag deze aan het eind gerold worden voor extra punten.","0",new quizz([]), new grid_game([],[])),
+    new game("Reken Kracht","",2 ," yTi", "syj", "", "question","Wat is 5+2*(2-3*4)","-15",new quizz([]), new grid_game([],[])),
+    new game("1 + 1 is Raampje","",2 ,"rCu", "OHO", "", "question","Wat is (2*6-8)+(24-9/3)","25",new quizz([]), new grid_game([],[])),
+    new game("Alle eentjes zwemmen in het water","",2 ,"duG", "eeA", "", "question","Wat is 1+111+1*(1+1+11+1)","126",new quizz([]), new grid_game([],[])),
     ];
 
     private makeid(length: number) {
