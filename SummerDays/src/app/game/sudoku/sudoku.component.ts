@@ -65,7 +65,7 @@ saveSolution(){
     team.games.forEach(x =>{
       if(x.code == this.gameLogic.getCurrentGame().codeblad+this.gameLogic.getCurrentGame().codezaal){
         x.status = "Failure";
-        x.succeded = true;
+        x.succeded = false;
       }
     });
   }
