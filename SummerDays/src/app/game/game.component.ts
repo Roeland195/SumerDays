@@ -165,11 +165,10 @@ public startQuestion(){
           return;
         }
       });
+    }
 
-      if(this.currentlyPlaying.image.endsWith('png' || 'jpg' || 'jpeg') ||this.currentlyPlaying.image.endsWith('jpg')||this.currentlyPlaying.image.endsWith('jpeg')){
-        this.setImage();
-      }
-
+    if(this.currentlyPlaying.image.endsWith('png' || 'jpg' || 'jpeg') ||this.currentlyPlaying.image.endsWith('jpg')||this.currentlyPlaying.image.endsWith('jpeg')){
+       this.setImage();
     }
 
     this.teamGameItem = new group_games(this.currentlyPlaying.name, this.currentlyPlaying.codeblad+this.currentlyPlaying.codezaal, "in Progress",0,false,"");
@@ -178,7 +177,10 @@ public startQuestion(){
       if(!currentTeam.games){
         currentTeam.games = [];
       }
-      currentTeam.games.push(this.teamGameItem);
+      if(!gameAlreadyInPlayedGameList){
+        currentTeam.games.push(this.teamGameItem);
+      }
+            
       this.gameLogic.setGroupInfo(currentTeam);
   
       console.log("team");
