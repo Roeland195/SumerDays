@@ -60,6 +60,7 @@ private startClicker(){this.router.navigate(['clicker']);}
 private startBinary(){this.router.navigate(['binary']);}
   
 public startQuestion(){
+  this.collectLatestTeamVersion();
   console.log("startQuestion");
   if(this.currentlyPlaying.type == 'question' || this.currentlyPlaying.type == 'schrift' || this.currentlyPlaying.type == 'zoek'){
     console.log("Ik ga controleren");
@@ -126,6 +127,35 @@ public startQuestion(){
   addAwnser(event: any){
     this.givenAwnser =event.target.value;
   }
+
+    collectLatestTeamVersion(){
+    this.http.get<any>("/pool")
+    .pipe(
+      map((responseData: {[key: string]: group}) =>
+      {
+        const data: group[] = [];
+        for (const key in responseData)
+        {
+          if (responseData.hasOwnProperty(key))
+          {
+            data.push({ ...responseData[key], id: key});
+          }
+        }
+        return data;
+      })
+    ).subscribe(
+      (data) => 
+      {
+        data.forEach(team =>
+          {
+            if(team.code == this.gameLogic.getGroupInfo().code)
+            {
+              this.gameLogic.setGroupInfo(team);
+            }
+          });
+      }, () => {}
+  );
+}
 
   constructor(private http: HttpSercive, private router: Router){
     this.gameLogic = gameLogicService.getInstance();
